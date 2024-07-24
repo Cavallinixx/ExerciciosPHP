@@ -32,14 +32,20 @@
         </button><br><br>
 
         
-        <textArea rows="100" cols="40" readOnly>
+        <textArea rows="100" cols="70" readOnly>
             <?php
                 echo "\nExercício 1: ".somar($num1,$num2). 
                 "\nExercício 2: ".parImpar($num1).
                 "\nExercício 3: ".idade($num1).
                 "\nExercício 4: ".dobrar($num1).
                 "\nExercício 5: ".conversaoCelcius($num1).
-                "\nExercício 6: ".maiorNum($num1,$num2,$num3);
+                "\nExercício 6: ".maiorNum($num1,$num2,$num3).
+                "\nExercício 7: ".poNeZe($num1).
+                "\nExercício 8: ".tabuada($num1).
+                "\nExercicio 9: ".somarAteNum($num1).
+                "\nExercicio 10: ".numPrimo($num1);
+                
+               
                 
         
             ?>
