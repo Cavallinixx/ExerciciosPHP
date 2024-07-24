@@ -22,11 +22,16 @@
         <label>Terceiro Número: </label>
         <input type="number" id="num3" name="num3"/><br><br>
 
+        <label>Informe a palavra: </label>
+        <input type="text" id="palavra" name="palavra"/><br><br>
+
+
         <button> Calcular
             <?php
                 $num1 = $_POST['num1'];
                 $num2 = $_POST['num2'];
                 $num3 = $_POST['num3'];
+                $palavra = $_POST['palavra'];
                 
             ?>        
         </button><br><br>
@@ -43,7 +48,8 @@
                 "\nExercício 7: ".poNeZe($num1).
                 "\nExercício 8: ".tabuada($num1).
                 "\nExercicio 9: ".somarAteNum($num1).
-                "\nExercicio 10: ".numPrimo($num1);
+                "\nExercicio 10: ".numPrimo($num1).
+                "\nExercicio 11: ".palindromo($palavra);
                 
                
                 

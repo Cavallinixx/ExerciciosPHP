@@ -2,7 +2,7 @@
     $num1 = 0;
     $num2 = 0;
     $num3 = 0;
-
+    $palavra = "";
     function somar($num1,$num2){
         return $num1 + $num2;
     }//fim do somar
@@ -58,41 +58,48 @@
     function somarAteNum($num1){
         $soma = 0;
         
-        while($i <= $num1){
+        
             for($i = 1; $i <= $num1; $i++){
                 $soma += $i;
-            
+                echo "Adicionando: $i, Soma atual: $soma\n";
             }
-          return $soma;
-        }  
-       
+            return $soma;
+          
     }
 
     function numPrimo($num1){
-        $num1 = 0;
-        $i = 1;
-        $primo;
-        
-    
-        if(($num1 <= 1)){
-            return "O número não é primo.";
+        if($num1 <= 1){
+            return "O número não é primo";
         }
         
-         $primo == true;
-    
-        for($i = 2; $i < $num1; $i++){
+        $primo = true;
+        
+        for($i = 2; $i <= sqrt($num1); $i++){
             if ($num1 % $i == 0){
-                $primo == false;
-
+                $primo = false;
+                break;
             }
         }
-    
+        
         if ($primo) {
-            return "O número é primo.";
+            return "O número $num1 é primo.";
         } else {
-            return "O número não é primo.";
+            return "O número $num1 não é primo.";
         }
     }
+
+    function palindromo($palavra){
+        
+    
+        if ($palavra == strrev($palavra)) {
+            return "A palavra '$palavra' é um palíndromo.";
+        } else {
+            return "A palavra '$palavra' não é um palíndromo.";
+        }
+    }
+    
+   
+    
 
     
    
