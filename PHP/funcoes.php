@@ -58,7 +58,6 @@
     function somarAteNum($num1){
         $soma = 0;
         
-        
             for($i = 1; $i <= $num1; $i++){
                 $soma += $i;
                 echo "Adicionando: $i, Soma atual: $soma\n";
@@ -97,6 +96,71 @@
             return "A palavra '$palavra' não é um palíndromo.";
         }
     }
+
+    function fatorial($num1){
+        $resultado = 1;
+        
+        for ($i =1; $i <= $num1; $i++){
+            $resultado *= $i;
+            
+        }
+        return "O valor de: ". $num1."!"." é: ".$resultado;
+    }
+
+    function exibirPar($num1){
+        $resultado = [];
+        $i = 1;
+
+        for($i = 1; $i <= $num1; $i++){
+            if ($i % 2 === 0){
+                $resultado [] = $i;
+                
+            }
+        }
+        return "Os números pares são: ".implode(",",$resultado);
+    }
+
+    function vogais($palavra){
+        $vogais = ["a","e","i","o","u","A","E","I","O","U"];
+        $cont = 0;
+
+        for($i = 0; $i < strlen($palavra); $i++){
+            if (in_array($palavra[$i], $vogais)){
+                $cont++;
+            }
+        }
+        return "A palavra '$palavra' tem $cont vogais.";
+    }
+        
+    function exibirPrimos($num1){
+        $primo = [];
+        for($i = 2; $i <= $num1; $i++){
+            $ehprimo = true; 
+                for($j = 2; $j <= sqrt($i); $j++){
+                    if ($i % $j == 0){
+                        $ehprimo = false;  
+                        break;
+                    }
+                }
+                if ($ehprimo){
+                    $primo [] = $i;
+                }
+        }
+        return "Os números primos são: ".implode(",",$primo);
+    }
+    
+    function verificarData($data){
+        $dataverificar;
+        $month = 0;
+        $day =0;
+        $year = 0;
+        if (checkdate(int $month,int $day, int $year)){
+            $dataverificar == true;
+        }
+        return "A data digitada esta valida";
+    }
+
+    
     
    
     

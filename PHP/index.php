@@ -25,6 +25,9 @@
         <label>Informe a palavra: </label>
         <input type="text" id="palavra" name="palavra"/><br><br>
 
+        <label>Informe uma data: </label>
+        <input type="date" id="data" name="data"/><br><br>
+
 
         <button> Calcular
             <?php
@@ -32,6 +35,7 @@
                 $num2 = $_POST['num2'];
                 $num3 = $_POST['num3'];
                 $palavra = $_POST['palavra'];
+                $date = $_POST['data'];
                 
             ?>        
         </button><br><br>
@@ -49,7 +53,12 @@
                 "\nExercício 8: ".tabuada($num1).
                 "\nExercicio 9: ".somarAteNum($num1).
                 "\nExercicio 10: ".numPrimo($num1).
-                "\nExercicio 11: ".palindromo($palavra);
+                "\nExercicio 11: ".palindromo($palavra).
+                "\nExercicio 12: ".fatorial($num1).
+                "\nExercicio 13: ".exibirPar($num1).
+                "\nExercicio 14: ".vogais($palavra).
+                "\nExercicio 15: ".exibirPrimos($num1).
+                "\nExercicio 16: ".verificarData($date);
                 
                
                 
